@@ -39,7 +39,10 @@ public class Universidad {
 	public boolean agregarEstudiante(int codigo, String nombre,
 			String email,Fecha fechaNac, String sexo, String programa)
 					throws PosicionIlegalException{
-		Estudiante est = buscarEstudiante(codigo);
+		//Estudiante est = buscarEstudiante(codigo);
+		//Modifique la siguiente línes para que busque al estudiante
+		//utilizando el método buscarEstudiante
+		Estudiante est = null; //deberá sustituir el null por la accion correcta
 		if (est == null) {
 			estudiantes.agregar(new Estudiante(codigo, nombre,
 					email, fechaNac, sexo, programa));
@@ -124,7 +127,9 @@ public class Universidad {
 			return null;
 		}
 		Lista<Recurso> recursosprestados = new Lista<Recurso>();
-		for(int i=0;i<prestamos.getTamanio();i++) {
+		//Modifique el cabecero del siguiente for (linea 132), para que muestre todos los 
+		//elementos de la lista ya que hay un error
+		for(int i=1;i<prestamos.getTamanio();i++) {
 			Prestamo pres = prestamos.getValor(i);
 			if (pres.getEstudiante().getCodigo() ==codigo && 
 					!pres.getRecurso().isDisponible()) {
@@ -255,25 +260,7 @@ public class Universidad {
 	public Lista<Estudiante> mostrarEstudiantesMasDeTres() throws PosicionIlegalException {
 		 Lista<Estudiante> prestamosMasDeTres=new Lista<Estudiante>();
 		
-		for (int i=0;i<estudiantes.getTamanio();i++) {
-			
-			 Estudiante estudiante = estudiantes.getValor(i);
-			 int contador = 0;
-			 for(int j=0;j<prestamos.getTamanio();j++) {
-				 
-				 if(estudiante.equals(prestamos.getValor(j).getEstudiante())) {
-					 //Si el recurso del estudiante ya esta devuelto, no lo considero
-					 if (prestamos.getValor(j).getFechaDevolucion() == null)
-					    contador++;
-				 }		 
-				 
-			 }
-			 if (contador>3)
-			 {
-				 prestamosMasDeTres.agregar(estudiante);
-			 }
-			
-		}	
+		
 		
 		return prestamosMasDeTres;
 	}

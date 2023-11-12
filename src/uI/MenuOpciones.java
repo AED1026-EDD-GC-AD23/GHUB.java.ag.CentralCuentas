@@ -244,20 +244,20 @@ public class MenuOpciones {
     public  void consultarRecursosEstudianteMasDeTres() {
 		try {
 			 Lista<Estudiante> prestamosMasDeTres=new Lista<Estudiante>();
-			 prestamosMasDeTres=univ.mostrarEstudiantesMasDeTres();
+			 //Coloque aquí la linea faltante para invocar al método mostrarEstudiantesMasDeTres()
+			 prestamosMasDeTres=null; //Sustituya a Null con lo correcto
 			 if (prestamosMasDeTres.getTamanio()==0)
 				 System.out.println("*** No Existe ningún estudiante con mas de TRES préstamos ***");
 			 else
 				 System.out.println("*** Estudiantes con mas de Tres Préstamos ***");
 				 
-			
+			//Coloque dentro del for, las lineas para que despliege la lista
+			//de alumnos que tienen mas de tres prestamos
+			//debiendo imprimir: codigo,email,Programa, sexo y fecha de Nacimiento del estudiante
 			 for(int i=0;i<prestamosMasDeTres.getTamanio();i++) {
-				 System.out.println("Estudiante: "+
-			 prestamosMasDeTres.getValor(i).getNombre()+" "+prestamosMasDeTres.getValor(i).getCodigo()+" "+
-						                           prestamosMasDeTres.getValor(i).getEmail()+" "+
-						                           prestamosMasDeTres.getValor(i).getPrograma()+" "+
-						                           prestamosMasDeTres.getValor(i).getSexo()+" "+
-						                           prestamosMasDeTres.getValor(i).getFechaNac()+" ");
+				/*
+				 coloque aquí lo conducente
+			   */
 			 }
 		
 		}

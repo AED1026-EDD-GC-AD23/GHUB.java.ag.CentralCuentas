@@ -6,7 +6,6 @@
 ./src/datos/Fecha.java
 ./src/datos/Recurso.java
 ./src/datos/Lista.java
-./src/datos/Lista2.java
 ./src/uI/Menu.java
 ./src/uI/Principal.java
 ./src/uI/MenuOpciones.java

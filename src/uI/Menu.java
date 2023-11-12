@@ -58,12 +58,17 @@ public class Menu {
 			case 9:
 				iOpc.ConsultarRecursoPrestado();
 				break;
+
 			case 10:
 				iOpc.consultarRecursosEstudiante();
 				break;
 			case 11:
-				iOpc.consultarRecursosEstudianteMasDeTres();
-				break;
+				//Llame al Método que ejecuta la acción de buscar
+				//a los estudiantes que tienen mas de tres préstamos
+				//el método se encuetra en la clase MenuOpciones y se llama:
+				//consultarRecursosEstudianteMasDeTres
+				//iOpc.consultarRecursosEstudianteMasDeTres();
+				//break;
 			case 99:
 				salir();
 				break;
